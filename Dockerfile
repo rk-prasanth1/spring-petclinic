@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy the project files into the container
 COPY . .
 
-# Build the Maven project
+# Build the Maven project and "-DskipTest" skip the test if have any [speed up the process ]
 RUN mvn clean package -DskipTests
 
 # Set the final base image
